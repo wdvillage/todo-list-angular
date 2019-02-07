@@ -1,0 +1,25 @@
+<nav class="menu clearfix">
+    <h3>{{not_found}}</h3>
+
+    <a class="" routerLink='/completed'>
+      <button mat-raised-button>
+        <mat-icon>bookmark</mat-icon>
+      </button>     
+    </a>
+    <a class="" routerLink='/todo-add'>         
+      <button mat-raised-button>
+        <mat-icon>add</mat-icon>
+      </button>
+    </a>
+    <a class="" routerLink='/todo-list'>
+      <button mat-raised-button>
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </a>
+
+</nav>
+
+<mat-card class="not-found-container">
+	<mat-icon class="error">error</mat-icon>
+	<div class="not-found">{{not_found}}</div>
+</mat-card>

@@ -1,0 +1,93 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";/* You can add global styles to this file, and also import other style files */
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: #e0e0e0;
+}
+.wrapper {
+	width: 50%;
+	margin: 20px auto;
+}
+
+nav a {
+	margin: 5px;
+	float: right;
+}
+nav {
+	background: #ccc;
+}
+nav h3 {
+	float: left;
+	padding: 12px;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.list li {
+	margin-top: 10px;
+	list-style-type: none; 
+}
+.btn-container .edit,
+.btn-container .undo,
+.btn-container .delete,
+.btn-container .check  {
+	margin-bottom: 5px;
+}
+.list li {
+	cursor: pointer;
+}
+
+.mat-card-title {
+	padding-bottom: 10px;
+	border-bottom: 1px #ccc solid;
+}
+.mat-card-content{
+	background: #f7f7f7;
+	padding: 10px;
+	border-radius: 5px;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.mat-card {
+	margin-top: 10px;
+	min-height: 95px;
+}
+
+.save,
+.update {
+	float: right;
+}
+
+.mat-card-title,
+.mat-card-content {
+	width: 80%;
+}
+.btn-container {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 70px;
+}
+.mat-card-container {
+	position:relative; 
+}
+
+@media screen and (max-width: 900px) {
+
+	.wrapper {
+            width: 100%;
+        }
+
+}

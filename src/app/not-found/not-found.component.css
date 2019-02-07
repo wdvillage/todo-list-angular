@@ -1,0 +1,13 @@
+.not-found {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.not-found-container {
+	text-align: center;
+    margin-top: 10px;
+}
+.error {
+	color: red;
+	font-size: 30px;
+}

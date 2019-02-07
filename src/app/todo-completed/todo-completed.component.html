@@ -1,0 +1,41 @@
+<nav class="menu clearfix">
+    <h3>{{page_title}}</h3>
+
+    <a class="" routerLink='/completed'>
+      <button mat-raised-button>
+        <mat-icon>bookmark</mat-icon>
+      </button>     
+    </a>
+    <a class="" routerLink='/todo-add'>         
+      <button mat-raised-button>
+        <mat-icon>add</mat-icon>
+      </button>
+    </a>
+    <a class="" routerLink='/todo-list'>
+      <button mat-raised-button>
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </a>
+
+</nav>
+
+
+
+<ul class="list">
+  <li *ngFor="let completedTask of completedTasks" routerLink="/todo-item/id">
+    <mat-card>
+      <mat-card-title>{{completedTask.name}}</mat-card-title>
+      <mat-card-content>{{completedTask.description}}</mat-card-content>
+      <mat-card-footer class="clearfix">
+        <div class="btn-container">
+      <button mat-raised-button (click)="currentTask(completedTask.id)" class="undo" color="primary">
+        <mat-icon>undo</mat-icon>
+      </button>
+      <button mat-raised-button (click)="deleteTask(completedTask.id)" class="delete" color="primary">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+      </mat-card-footer>
+    </mat-card>
+  </li>
+</ul>

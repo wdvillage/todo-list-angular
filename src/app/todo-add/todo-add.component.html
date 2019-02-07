@@ -1,0 +1,41 @@
+<nav class="menu clearfix">
+    <h3>{{page_title}}</h3>
+
+    <a class="" routerLink='/completed'>
+      <button mat-raised-button>
+        <mat-icon>bookmark</mat-icon>
+      </button>     
+    </a>
+    <a class="" routerLink='/todo-add'>         
+      <button mat-raised-button>
+        <mat-icon>add</mat-icon>
+      </button>
+    </a>
+    <a class="" routerLink='/todo-list'>
+      <button mat-raised-button>
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </a>
+
+</nav>
+
+
+<div class="addtask">
+<mat-card class="clearfix">
+	<form [formGroup]="add_form" (submit)="submit()">
+	  <mat-form-field>
+	  	<input matInput formControlName="name" placeholder="Task's title" requered>
+	  </mat-form-field>
+
+	  <mat-form-field>
+	  	<input matInput formControlName="description" placeholder="Task's description">
+	  </mat-form-field>
+	  <!--<button mat-raised-button routerLink="/todo-list" class="save" color="primary">-->
+    <button mat-raised-button class="save" color="primary">
+		<!--<mat-icon>add</mat-icon>-->
+    Save
+	  </button>
+  	</form>
+</mat-card>
+
+</div>

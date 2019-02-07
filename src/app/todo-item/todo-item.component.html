@@ -1,0 +1,58 @@
+<nav class="menu clearfix">
+    <h3>{{page_title}}</h3>
+
+    <a class="" routerLink='/completed'>
+      <button mat-raised-button>
+        <mat-icon>bookmark</mat-icon>
+      </button>     
+    </a>
+    <a class="" routerLink='/todo-add'>         
+      <button mat-raised-button>
+        <mat-icon>add</mat-icon>
+      </button>
+    </a>
+    <a class="" routerLink='/todo-list'>
+      <button mat-raised-button>
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </a>
+
+</nav>
+
+
+<div class="addtask">
+<mat-card class="clearfix">
+  <form [formGroup]="item_form" (submit)="update()" novalidate>
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="Task's title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="description" placeholder="Task's description">
+    </mat-form-field>
+    <!--<button mat -raised-button routerLink="/todo-list" class="save" color="primary">-->
+    <button mat-raised-button class="update" color="primary">
+    <!--<mat-icon>add</mat-icon>-->
+    Update
+    </button>
+    </form>
+</mat-card>
+
+</div>
+<!--<div class="addtask">
+<mat-card class="clearfix">
+  <form [formGroup]="form" (submit)="submit()" novalidate>
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="Task's title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput formControlName="description" placeholder="Task's description">
+    </mat-form-field>
+    <button mat-raised-button class="update" color="primary">
+    Update
+    </button>
+    </form>
+</mat-card>
+
+</div>-->
