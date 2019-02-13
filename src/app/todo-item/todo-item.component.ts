@@ -37,15 +37,16 @@ public item_form : FormGroup = new FormGroup({
 
     let tasks=this.taskService.getTasks();
     this.task=tasks.find(p => p.id==this.id);
-    let oldTask=this.task;
 
+    let oldTask=this.task;
+    console.log(oldTask);
     let newTask = {
       id:oldTask.id,
       done: oldTask.done,
       name: this.item_form.value.name,
       description: this.item_form.value.description,
     }
-
+    console.log(newTask);
     this.taskService.updateTask(oldTask, newTask);
     this.router.navigate(['todo-list']);
     }

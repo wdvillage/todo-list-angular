@@ -14,20 +14,23 @@ public task:Task;
 
   getTasks() {
      this.tasks = JSON.parse(localStorage.getItem('todoListAngular'));
-     console.log(this.tasks);
      return this.tasks;
 	}
 
   getCurrentTasks() {
      let currentTasks=[];
      this.tasks = JSON.parse(localStorage.getItem('todoListAngular'));
+     if (this.tasks!=null || this.tasks!=undefined ) { 
      this.tasks.forEach(function(item, i, tasks) {
       if (item.done===false) {
       currentTasks.push(item);
       }
     });
+   } else {
+     currentTasks=[];
+   }
      return currentTasks;
-  }
+   }
 
   getCompletedTasks() {
     let completedTasks=[];
