@@ -35,13 +35,18 @@ public task:Task;
   getCompletedTasks() {
     let completedTasks=[];
      this.tasks = JSON.parse(localStorage.getItem('todoListAngular'));
+     if (this.tasks!=null || this.tasks!=undefined ) { 
      this.tasks.forEach(function(item, i, tasks) {
       if (item.done===true) {
       completedTasks.push(item);
       }
     });
+   } else {
+     completedTasks=[];
+   }
      return completedTasks;
   }
+
 
   addTask(task) {
       let tasks = JSON.parse(localStorage.getItem('todoListAngular'));
