@@ -22,7 +22,7 @@
 
 <div class="addtask">
 <mat-card class="clearfix">
-  <form [formGroup]="item_form" (submit)="update()" novalidate>
+  <form [formGroup]="item_form" (submit)="update(id)" novalidate>
     <mat-form-field>
       <input matInput formControlName="name" placeholder="Task's title">
     </mat-form-field>
