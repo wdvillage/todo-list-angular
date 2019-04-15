@@ -7,9 +7,9 @@ import { TASKS } from './initial-data';
 })
 export class TaskService {
 public tasks:Task[];
-//public currentTasks:Task[];
-//public completedTasks:Task[];
+public TASKS:Task[];
 public task:Task;
+
   constructor() { }
 
   getTasks() {
@@ -19,6 +19,7 @@ public task:Task;
 
   getCurrentTasks() {
      let currentTasks=[];
+     let tasks=[];
      this.tasks = JSON.parse(localStorage.getItem('todoListAngular'));
      if (this.tasks!=null || this.tasks!=undefined ) { 
      this.tasks.forEach(function(item, i, tasks) {
@@ -27,7 +28,15 @@ public task:Task;
       }
     });
    } else {
-     currentTasks=[];
+       TASKS.forEach(function(item, i, tasks) {
+        if (item.done===false) {
+        currentTasks.push(item);
+        console.log(item);
+        }
+      });
+       console.log(currentTasks);
+
+     localStorage.setItem('todoListAngular', JSON.stringify(TASKS));
    }
      return currentTasks;
    }
@@ -42,7 +51,15 @@ public task:Task;
       }
     });
    } else {
-     completedTasks=[];
+       TASKS.forEach(function(item, i, tasks) {
+        if (item.done===true) {
+        completedTasks.push(item);
+        console.log(item);
+        }
+      });
+       console.log(completedTasks);
+
+     localStorage.setItem('todoListAngular', JSON.stringify(TASKS));
    }
      return completedTasks;
   }
