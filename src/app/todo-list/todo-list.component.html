@@ -2,17 +2,17 @@
     <h3>{{page_title}}</h3>
 
     <a class="" routerLink='/completed'>
-      <button mat-raised-button>
+      <button mat-raised-button matTooltip="List with completed tasks">
         <mat-icon>bookmark</mat-icon>
       </button>     
     </a>
     <a class="" routerLink='/todo-add'>         
-      <button mat-raised-button>
+      <button mat-raised-button matTooltip="Add new task">
         <mat-icon>add</mat-icon>
       </button>
     </a>
     <a class="" routerLink='/todo-list'>
-      <button mat-raised-button>
+      <button mat-raised-button matTooltip="List with current tasks">
         <mat-icon>view_list</mat-icon>
       </button>
     </a>
@@ -27,15 +27,18 @@
       <mat-card-content>{{currentTask.description}}</mat-card-content>
 
         <div class="btn-container clearfix">
-        <button mat-raised-button (click)="editTask(currentTask.id)" class="edit" color="primary">
+        <button mat-raised-button (click)="editTask(currentTask.id)" class="edit" color="primary" matTooltip="Edit task"
+        [matTooltipPosition]="position.value">
         <mat-icon>edit</mat-icon>
       </button>
 
-      <button mat-raised-button (click)="completedTask(currentTask.id)" class="check" color="primary">
+      <button mat-raised-button (click)="completedTask(currentTask.id)" class="check" color="primary" matTooltip="Move task to completed tasks"
+        [matTooltipPosition]="position.value">
         <mat-icon>check</mat-icon>
       </button>
 
-      <button mat-raised-button (click)="deleteTask(currentTask.id)" class="delete" color="primary">
+      <button mat-raised-button (click)="deleteTask(currentTask.id)" class="delete" color="primary" matTooltip="Delete task"
+        [matTooltipPosition]="position.value">
         <mat-icon>clear</mat-icon>
       </button>
 

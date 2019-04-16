@@ -11,6 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { TodoAddComponent } from './todo-add/todo-add.component';
@@ -39,7 +40,8 @@ import { TodoCompletedComponent } from './todo-completed/todo-completed.componen
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from '../task';
 import { TaskService } from '../task.service';
+import {FormControl} from '@angular/forms';
+import {TooltipPosition} from '@angular/material';
 
 @Component({
   selector: 'app-todo-completed',
@@ -12,6 +14,9 @@ page_title='Completed tasks';
 tasks:Task[];
 completedTasks:Task[];
 task:Task;
+
+  positionOption: TooltipPosition = 'after';
+  position = new FormControl(this.positionOption);
 
   constructor(private taskService: TaskService) { }
 
