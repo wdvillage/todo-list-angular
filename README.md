@@ -1,5 +1,6 @@
 # todo-list-angular
 Simple todo list on Angular 7 with routing (save data in LocalStorage). Also used Angular Material.
+This project was generated with Angular CLI version 7.1.4.
 
 # Getting Started
 <ul>
