@@ -11,4 +11,4 @@ This project was generated with Angular CLI version 7.1.4.
 This will start a development server and your can see the application in action on address:http://localhost:4200
 
 # Demo
-You can see working project here: <a href="http://todo-list-angular.wdvillage.se/">ToDo List Angular</a>
+You can see working project here: <a href="http://todo-list-angular.wdvillage.com/">ToDo List Angular</a>
